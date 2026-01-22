@@ -1,11 +1,12 @@
 import { useState } from "react";
 import"../App.css";
-const Country=({country})=>{
+const Country = ({ country, handlerVisitedCountry})=>{
     const { name, independent }=country;
     const [visited, setVisied]=useState(false);
     const handleClick=()=>{
         
         visited?setVisied(false):setVisied(true);
+        handlerVisitedCountry(country);
     }
  
     return(
